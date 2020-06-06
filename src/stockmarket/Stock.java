@@ -4,75 +4,134 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Stock {
+	
 	protected String symbol;
 	protected Date date;
-	protected double openingPrice;
-	protected double highestPrice;
-	protected double lowestPrice;
-	protected double closingPrice;
-	protected double volumn;
+	protected double giaMoCua;
+	protected double giaGiuaPhienSang;
+	protected double giaChotPhienSang;
+	protected double giaDauPhienChieu;
+	protected double giaGiuaPhienChieu;
+	protected double giaDongCua;
+	protected double giaThapNhat;
+	protected double giaCaoNhat;
+	protected double volume;
 	
 	public Stock() {
 		
 	}
-		
-	public Stock(String symbol, Date date, double openingPrice, double highestPrice, double lowestPrice,
-			double closingPrice, double volumn) {
+	
+	public Stock(String symbol, Date date, double giaMoCua, double giaGiuaPhienSang, double giaChotPhienSang,
+			double giaDauPhienChieu, double giaGiuaPhienChieu, double giaDongCua, double giaThapNhat, double giaCaoNhat,
+			double volume) {
 		this.symbol = symbol;
 		this.date = date;
-		this.openingPrice = openingPrice;
-		this.highestPrice = highestPrice;
-		this.lowestPrice = lowestPrice;
-		this.closingPrice = closingPrice;
-		this.volumn = volumn;
+		this.giaMoCua = giaMoCua;
+		this.giaGiuaPhienSang = giaGiuaPhienSang;
+		this.giaChotPhienSang = giaChotPhienSang;
+		this.giaDauPhienChieu = giaDauPhienChieu;
+		this.giaGiuaPhienChieu = giaGiuaPhienChieu;
+		this.giaDongCua = giaDongCua;
+		this.giaThapNhat = giaThapNhat;
+		this.giaCaoNhat = giaCaoNhat;
+		this.volume = volume;
 	}
 
 
 	public String getSymbol() {
 		return symbol;
 	}
+
 	public void setSymbol(String symbol) {
 		this.symbol = symbol;
 	}
+
 	public Date getDate() {
 		return date;
 	}
+
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	public double getOpeningPrice() {
-		return openingPrice;
+
+	public double getGiaMoCua() {
+		return giaMoCua;
 	}
-	public void setOpeningPrice(double openingPrice) {
-		this.openingPrice = openingPrice;
+
+	public void setGiaMoCua(double giaMoCua) {
+		this.giaMoCua = giaMoCua;
 	}
-	public double getHighestPrice() {
-		return highestPrice;
+
+	public double getGiaGiuaPhienSang() {
+		return giaGiuaPhienSang;
 	}
-	public void setHighestPrice(double highestPrice) {
-		this.highestPrice = highestPrice;
+
+	public void setGiaGiuaPhienSang(double giaGiuaPhienSang) {
+		this.giaGiuaPhienSang = giaGiuaPhienSang;
 	}
-	public double getLowestPrice() {
-		return lowestPrice;
+
+	public double getGiaChotPhienSang() {
+		return giaChotPhienSang;
 	}
-	public void setLowestPrice(double lowestPrice) {
-		this.lowestPrice = lowestPrice;
+
+	public void setGiaChotPhienSang(double giaChotPhienSang) {
+		this.giaChotPhienSang = giaChotPhienSang;
 	}
-	public double getClosingPrice() {
-		return closingPrice;
+
+	public double getGiaDauPhienChieu() {
+		return giaDauPhienChieu;
 	}
-	public void setClosingPrice(double closingPrice) {
-		this.closingPrice = closingPrice;
+
+	public void setGiaDauPhienChieu(double giaDauPhienChieu) {
+		this.giaDauPhienChieu = giaDauPhienChieu;
 	}
-	public double getVolumn() {
-		return volumn;
+
+	public double getGiaGiuaPhienChieu() {
+		return giaGiuaPhienChieu;
 	}
-	public void setVolumn(double volumn) {
-		this.volumn = volumn;
+
+	public void setGiaGiuaPhienChieu(double giaGiuaPhienChieu) {
+		this.giaGiuaPhienChieu = giaGiuaPhienChieu;
+	}
+
+	public double getGiaDongCua() {
+		return giaDongCua;
+	}
+
+	public void setGiaDongCua(double giaDongCua) {
+		this.giaDongCua = giaDongCua;
 	}
 	
+	
+	public double getGiaThapNhat() {
+		return giaThapNhat;
+	}
+
+	public void setGiaThapNhat(double giaThapNhat) {
+		this.giaThapNhat = giaThapNhat;
+	}
+
+	public double getGiaCaoNhat() {
+		return giaCaoNhat;
+	}
+
+	public void setGiaCaoNhat(double giaCaoNhat) {
+		this.giaCaoNhat = giaCaoNhat;
+	}
+
+	public double getVolume() {
+		return volume;
+	}
+
+	public void setVolumn(double volume) {
+		this.volume = volume;
+	}
+
+
 	public void printStock() {
-		System.out.printf("%s - %s, %s, %s, %s, %s, %s", symbol, new SimpleDateFormat("dd/MM/yyyy").format(date), openingPrice, highestPrice, lowestPrice, closingPrice, volumn);
+		System.out.printf("%s - %s, %s, %s, %s, %s, %s, %s, %s, %s, %s", symbol, new SimpleDateFormat("dd/MM/yyyy").format(date), 
+			giaMoCua, giaGiuaPhienSang, giaChotPhienSang, giaDauPhienChieu, giaGiuaPhienChieu, giaDongCua, giaThapNhat, giaCaoNhat, volume);
 		System.out.println();
 	}
+	
 }

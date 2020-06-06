@@ -2,30 +2,27 @@ package stockmarket;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
-import java.util.LinkedHashMap;
+import java.util.HashMap;
 import java.util.Map;
 
 import readfile.ReadFiles;
 
-public class StockExchange {
+public class StockHistory {
 	
-	private String nameStockExchange;
-	private String symbolStockExchange;
-	private Map<String, Stock> stockMap;
-	private ReadFiles f;
+	private Date today;
+	private Map<Date, Stock> stockHistory;
 	
-	public StockExchange(ReadFiles f, String nameStockExchange, String symbolStockExchange) {
-		stockMap = new LinkedHashMap<String, Stock>();
-		this.f = f;
-		this.nameStockExchange = nameStockExchange;
-		this.symbolStockExchange = symbolStockExchange;
-		createStockMap(this.f.getArray());
-		
-	}
-	
-	public void createStockMap(String[][] s) {
+	public StockHistory(ReadFiles f) {
+		stockHistory = new HashMap<Date, Stock>();
+		String[][] s = f.getArray();
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
+		try {
+			today = (Date) dateFormat.parse(s[0][1]);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
 		for (int i = 0; i < s.length; i++) {
 			String symbol = s[i][0];
 			Date date = null;
@@ -44,15 +41,27 @@ public class StockExchange {
 			double giaCaoNhat = Double.parseDouble(s[i][9]);
 			double volume = Double.parseDouble(s[i][10]);
 			Stock stock = new Stock(symbol, date, giaMoCua, giaGiuaPhienSang, giaChotPhienSang, giaDauPhienChieu, giaGiuaPhienChieu, giaDongCua, giaThapNhat, giaCaoNhat, volume);
-			stockMap.put(symbol, stock);
+			stockHistory.put(date, stock);
 		}
-		
 	}
-	public void printStockMap() {
-		System.out.println("Tên sàn chứng khoán: " + nameStockExchange + " - " + symbolStockExchange);
-		for (Stock stock: stockMap.values()) {
-	        stock.printStock();
-	    }
+	
+	
+	public Date getToday() {
+		return today;
 	}
-}
+	
+	public Map<Date, Stock> getStockHistory() {
+		return stockHistory;
+	}
 
+	public Stock getStockToday() {
+		return stockHistory.get(today);
+	}
+	public Stock getStock(int n) {
+		Calendar c = Calendar.getInstance();
+		c.setTime(today);
+		c.add(Calendar.DAY_OF_MONTH, n);
+		return stockHistory.get(c.getTime());
+	}
+	
+}
