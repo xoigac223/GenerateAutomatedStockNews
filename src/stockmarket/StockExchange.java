@@ -13,10 +13,12 @@ public class StockExchange {
 	private String nameStockExchange;
 	private String symbolStockExchange;
 	private Map<String, Stock> stockMap;
+	private Map<String, Double> thayDoiCoPhieu;
 	private ReadFiles f;
 	
 	public StockExchange(ReadFiles f, String nameStockExchange, String symbolStockExchange) {
 		stockMap = new LinkedHashMap<String, Stock>();
+		thayDoiCoPhieu = new LinkedHashMap<String, Double>();
 		this.f = f;
 		this.nameStockExchange = nameStockExchange;
 		this.symbolStockExchange = symbolStockExchange;
@@ -43,16 +45,44 @@ public class StockExchange {
 			double giaThapNhat = Double.parseDouble(s[i][8]);
 			double giaCaoNhat = Double.parseDouble(s[i][9]);
 			double volume = Double.parseDouble(s[i][10]);
+			double thayDoi = Double.parseDouble(s[i][11]);
 			Stock stock = new Stock(symbol, date, giaMoCua, giaGiuaPhienSang, giaChotPhienSang, giaDauPhienChieu, giaGiuaPhienChieu, giaDongCua, giaThapNhat, giaCaoNhat, volume);
 			stockMap.put(symbol, stock);
+			thayDoiCoPhieu.put(symbol, thayDoi);
 		}
 		
 	}
-	public void printStockMap() {
+	public void printStockExchange() {
 		System.out.println("Tên sàn chứng khoán: " + nameStockExchange + " - " + symbolStockExchange);
 		for (Stock stock: stockMap.values()) {
 	        stock.printStock();
-	    }
+	        System.out.println();
+	    }		
+	}
+	public int getSoLuongCoPhieu() {
+		return stockMap.size();
+	}
+	public int timSoCoPhieuTangGia() {
+		int soCoPhieuTang = 0;
+		for (Double thayDoi : thayDoiCoPhieu.values()) {
+			if (thayDoi > 0) soCoPhieuTang++; 
+		}
+		return soCoPhieuTang;
+	}
+	public int timSoCoPhieuGiamGia() {
+		int soCoPhieuGiam = 0;
+		for (Double thayDoi : thayDoiCoPhieu.values()) {
+			if (thayDoi < 0) soCoPhieuGiam++; 
+		}
+		return soCoPhieuGiam;
+	}
+	public int timSoCoPhieuGiuNguyenGia() {
+		int soCoPhieuGiuNguyenGia = 0;
+		for (Double thayDoi : thayDoiCoPhieu.values()) {
+			if (thayDoi == 0) soCoPhieuGiuNguyenGia++; 
+		}
+		return soCoPhieuGiuNguyenGia;
 	}
 }
+	
 

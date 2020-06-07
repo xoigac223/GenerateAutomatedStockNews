@@ -1,6 +1,8 @@
 package stockmarket;
 
 import java.util.Date;
+import java.util.Map;
+
 import readfile.*;
 
 public class BigStock extends Stock{
@@ -37,5 +39,11 @@ public class BigStock extends Stock{
 	
 	public Stock history(int n) {
 		return stockHistory.getStock(n);
+	}
+	public int sizeHistory() {
+		return stockHistory.getSizeHistory();
+	}
+	public Map<Date, Stock> getHistory() {
+		return stockHistory.getStockHistory();
 	}
 }
