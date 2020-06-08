@@ -7,10 +7,18 @@ import java.util.Map;
 import stockmarket.BigStock;
 import stockmarket.Stock;
 
+<<<<<<< HEAD
 public class MauCauMucThapNhat extends MauCauDuaTrenBigStock implements MauCau{
 	
 	public MauCauMucThapNhat(BigStock stock) {
 		super(stock);
+=======
+public class MauCauMucThapNhat implements MauCau{
+	private BigStock stock;
+	
+	public MauCauMucThapNhat(BigStock stock) {
+		this.stock = stock;
+>>>>>>> 374f65ae75b8d985f29ae0dca5ace26f3ba022b2
 	}
 	
 	public String sinhCau() {

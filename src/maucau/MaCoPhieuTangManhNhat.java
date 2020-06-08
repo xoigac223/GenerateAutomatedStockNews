@@ -4,12 +4,21 @@ import java.util.List;
 
 import stockmarket.StockExchange;
 
+<<<<<<< HEAD
 public class MaCoPhieuTangManhNhat extends MauCauDuaTrenStockExchange implements MauCau{
 
 	public MaCoPhieuTangManhNhat(StockExchange se) {
 		super(se);
 	}
 	
+=======
+public class MaCoPhieuTangManhNhat implements MauCau {
+	private StockExchange stockExchange;
+	
+	public MaCoPhieuTangManhNhat(StockExchange se) {
+		stockExchange = se;
+	}
+>>>>>>> 374f65ae75b8d985f29ae0dca5ace26f3ba022b2
 	public String sinhCau() {
 		String mauCauMaCoPhieuTangNhanhNhat = null;
 		List<String> array = stockExchange.sapXepLaiMaCoPhieu();
