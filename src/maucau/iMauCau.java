@@ -1,5 +1,5 @@
 package maucau;
 
-public interface MauCau {
+public interface iMauCau {
 	public String sinhCau();
 }
