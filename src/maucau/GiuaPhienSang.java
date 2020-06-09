@@ -6,7 +6,7 @@ import java.util.Random;
 
 import stockmarket.BigStock;
 
-public class GiuaPhienSang implements MauCau {
+public class GiuaPhienSang implements iMauCau {
 	private static List<String> dauCauTang;
 	private static List<String> giuaCauTang;
 	private static List<String> dauCauGiam;

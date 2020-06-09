@@ -7,7 +7,7 @@ import java.util.Random;
 import stockmarket.StockExchange;
 
 
-public class MaCPGiamManhNhatGiuaPhienSang extends MauCauDuaTrenStockExchange implements MauCau {
+public class MaCPGiamManhNhatGiuaPhienSang extends MauCauDuaTrenStockExchange implements iMauCau {
 	
 	private static List<String> moDau;
 	private static List<String> giuaCauGiam;

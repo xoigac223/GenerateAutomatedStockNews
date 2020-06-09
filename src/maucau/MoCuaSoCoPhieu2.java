@@ -6,7 +6,7 @@ import java.util.Random;
 
 import stockmarket.*;
 
-public class MoCuaSoCoPhieu2 implements MauCau{
+public class MoCuaSoCoPhieu2 implements iMauCau{
 	private static List<String> dauCauTang; 
 	private static List<String> giuaCauTang;
 	private static List<String> dauCauOnDinh;
@@ -24,25 +24,25 @@ public class MoCuaSoCoPhieu2 implements MauCau{
 		dauCauGiam = new ArrayList<String>();
 		giuaCauGiam = new ArrayList<String>();
 
-		dauCauTang.add("Mở cửa hôm nay, bảng cổ phiếu tràn nghập mã blue,");
+		dauCauTang.add("Má»Ÿ cá»­a hÃ´m nay, báº£ng cá»• phiáº¿u trÃ n ngháº­p mÃ£ blue,");
 		
 		
-		dauCauOnDinh.add("Mở cửa phiên sáng nay,bảng mã khá hài hòa ");
-		dauCauOnDinh.add("Mở cửa phiên sáng nay,bảng mã khá ổn định ");
+		dauCauOnDinh.add("Má»Ÿ cá»­a phiÃªn sÃ¡ng nay,báº£ng mÃ£ khÃ¡ hÃ i hÃ²a ");
+		dauCauOnDinh.add("Má»Ÿ cá»­a phiÃªn sÃ¡ng nay,báº£ng mÃ£ khÃ¡ á»•n Ä‘á»‹nh ");
 		
 		
-		dauCauGiam.add("Mở cửa hôm nay, tràn ngập sắc đỏ");
-		dauCauGiam.add("Mở cửa phiên sáng nay, sàn có nhiều sắc đỏ");
+		dauCauGiam.add("Má»Ÿ cá»­a hÃ´m nay, trÃ n ngáº­p sáº¯c Ä‘á»�");
+		dauCauGiam.add("Má»Ÿ cá»­a phiÃªn sÃ¡ng nay, sÃ n cÃ³ nhiá»�u sáº¯c Ä‘á»�");
 		
-		giuaCauTang.add(" tăng lên ");
-		giuaCauTang.add(" tiếp tục tín hiệu lạc quan khi nhích thêm ");
-		giuaCauTang.add(" cộng điểm ");
+		giuaCauTang.add(" tÄƒng lÃªn ");
+		giuaCauTang.add(" tiáº¿p tá»¥c tÃ­n hiá»‡u láº¡c quan khi nhÃ­ch thÃªm ");
+		giuaCauTang.add(" cá»™ng Ä‘iá»ƒm ");
 		
-		giuaCauGiam.add(" điều chỉnh và giảm ");
-		giuaCauGiam.add("mã điều chỉnh và giảm");
-		giuaCauGiam.add("mã giảm điểm");
-		giuaCauGiam.add("mã tụt điểm");
-		giuaCauGiam.add("mã lao dốc");
+		giuaCauGiam.add(" Ä‘iá»�u chá»‰nh vÃ  giáº£m ");
+		giuaCauGiam.add("mÃ£ Ä‘iá»�u chá»‰nh vÃ  giáº£m");
+		giuaCauGiam.add("mÃ£ giáº£m Ä‘iá»ƒm");
+		giuaCauGiam.add("mÃ£ tá»¥t Ä‘iá»ƒm");
+		giuaCauGiam.add("mÃ£ lao dá»‘c");
 
 	}
 	
@@ -68,8 +68,8 @@ public class MoCuaSoCoPhieu2 implements MauCau{
 		}
 		}
 		sb.append(dauCau);sb.append(String.format("%.3g", SoLuongCoPhieu));
-		sb.append("của sàn ");sb.append(symbol);sb.append(",trong đó có");sb.append(String.format("%.3g", timSoCoPhieuTangGia));
-		sb.append(giuaTang);sb.append("và");sb.append(String.format("%.3g", timSoCoPhieuGiamGia));sb.append(giuaGiam);
+		sb.append("cá»§a sÃ n ");sb.append(symbol);sb.append(",trong Ä‘Ã³ cÃ³");sb.append(String.format("%.3g", timSoCoPhieuTangGia));
+		sb.append(giuaTang);sb.append("vÃ ");sb.append(String.format("%.3g", timSoCoPhieuGiamGia));sb.append(giuaGiam);
 		sb.append(".");
 		mauCauMoCua = sb.toString();
 		return mauCauMoCua;

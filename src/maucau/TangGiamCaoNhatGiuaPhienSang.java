@@ -8,7 +8,7 @@ import java.util.Random;
 import stockmarket.BigStock;
 import stockmarket.StockExchange;
 
-public class TangGiamCaoNhatGiuaPhienSang implements MauCau{
+public class TangGiamCaoNhatGiuaPhienSang implements iMauCau{
 	
 	private static List<String> moDautang;
 	private static List<String> moDauGiam;

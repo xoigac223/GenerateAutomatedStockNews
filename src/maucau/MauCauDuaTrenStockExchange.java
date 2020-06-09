@@ -2,7 +2,7 @@ package maucau;
 
 import stockmarket.StockExchange;
 
-public abstract class MauCauDuaTrenStockExchange implements MauCau {
+public abstract class MauCauDuaTrenStockExchange implements iMauCau {
 	protected StockExchange stockExchange;
 	
 	public MauCauDuaTrenStockExchange(StockExchange se) {

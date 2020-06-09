@@ -6,7 +6,7 @@ import java.util.Random;
 
 import stockmarket.BigStock;
 
-public class MauCauMoCua extends MauCauDuaTrenBigStock implements MauCau{
+public class MauCauMoCua extends MauCauDuaTrenBigStock implements iMauCau{
 	private static List<String> dauCauTang; 
 	private static List<String> giuaCauTang; 
 	private static List<String> dauCauGiam; 
@@ -19,19 +19,19 @@ public class MauCauMoCua extends MauCauDuaTrenBigStock implements MauCau{
 		dauCauGiam = new ArrayList<String>();
 		giuaCauGiam = new ArrayList<String>();
 		
-		dauCauTang.add("Tiếp tục tín hiệu khởi sắc từ hôm qua, bước vào đầu phiên giao dịch, ");
-		dauCauTang.add("Mở cửa hôm nay, ");
-		dauCauTang.add("Mở cửa phiên sáng nay, ");
-		dauCauTang.add("Trước đó, lúc mở cửa phiên, tiếp nối đà tăng từ hôm trước, ");
+		dauCauTang.add("Tiáº¿p tá»¥c tÃ­n hiá»‡u khá»Ÿi sáº¯c tá»« hÃ´m qua, bÆ°á»›c vÃ o Ä‘áº§u phiÃªn giao dá»‹ch, ");
+		dauCauTang.add("Má»Ÿ cá»­a hÃ´m nay, ");
+		dauCauTang.add("Má»Ÿ cá»­a phiÃªn sÃ¡ng nay, ");
+		dauCauTang.add("TrÆ°á»›c Ä‘Ã³, lÃºc má»Ÿ cá»­a phiÃªn, tiáº¿p ná»‘i Ä‘Ã  tÄƒng tá»« hÃ´m trÆ°á»›c, ");
 		
-		dauCauGiam.add("Mở cửa hôm nay, ");
-		dauCauGiam.add("Mở cửa phiên sáng nay, ");
+		dauCauGiam.add("Má»Ÿ cá»­a hÃ´m nay, ");
+		dauCauGiam.add("Má»Ÿ cá»­a phiÃªn sÃ¡ng nay, ");
 		
-		giuaCauTang.add(" tăng thêm ");
-		giuaCauTang.add(" tiếp tục tín hiệu lạc quan khi nhích thêm ");
-		giuaCauTang.add(" cộng thêm ");
+		giuaCauTang.add(" tÄƒng thÃªm ");
+		giuaCauTang.add(" tiáº¿p tá»¥c tÃ­n hiá»‡u láº¡c quan khi nhÃ­ch thÃªm ");
+		giuaCauTang.add(" cá»™ng thÃªm ");
 		
-		giuaCauGiam.add(" điều chỉnh và giảm ");
+		giuaCauGiam.add(" Ä‘iá»�u chá»‰nh vÃ  giáº£m ");
 
 	}
 	
@@ -53,7 +53,7 @@ public class MauCauMoCua extends MauCauDuaTrenBigStock implements MauCau{
 			chenhLech = -chenhLech;
 		}
 		sb.append(dauCau); sb.append(symbol); sb.append(giuaCau); sb.append(String.format("%.3g", chenhLech));
-		sb.append(" điểm, dừng ở "); sb.append(giaMoCuaHomNay); sb.append(".");
+		sb.append(" Ä‘iá»ƒm, dá»«ng á»Ÿ "); sb.append(giaMoCuaHomNay); sb.append(".");
 		mauCauMoCua = sb.toString();
 		return mauCauMoCua;
 	}
