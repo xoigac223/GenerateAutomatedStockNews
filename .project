@@ -14,4 +14,21 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/picture/icon.png</name>
+			<type>1</type>
+			<location>C:/Users/daonv/OneDrive/Pictures/icon.png</location>
+		</link>
+		<link>
+			<name>src/picture/purepng.com-stocks-icon-ios-7symbolsiconsapple-iosiosios-7-iconsios-7-721522596667usvyp (1).png</name>
+			<type>1</type>
+			<location>C:/Users/daonv/OneDrive/Pictures/purepng.com-stocks-icon-ios-7symbolsiconsapple-iosiosios-7-iconsios-7-721522596667usvyp (1).png</location>
+		</link>
+		<link>
+			<name>src/picture/purepng.com-stocks-icon-ios-7symbolsiconsapple-iosiosios-7-iconsios-7-721522596667usvyp.png</name>
+			<type>1</type>
+			<location>C:/Users/daonv/OneDrive/Pictures/purepng.com-stocks-icon-ios-7symbolsiconsapple-iosiosios-7-iconsios-7-721522596667usvyp.png</location>
+		</link>
+	</linkedResources>
 </projectDescription>

@@ -6,15 +6,14 @@ import java.util.Random;
 
 import stockmarket.BigStock;
 
-public class MauCauMoCua implements MauCau{
+public class MauCauMoCua extends MauCauDuaTrenBigStock implements MauCau{
 	private static List<String> dauCauTang; 
 	private static List<String> giuaCauTang; 
 	private static List<String> dauCauGiam; 
 	private static List<String> giuaCauGiam; 
-	private BigStock stock;
 	
 	public MauCauMoCua(BigStock stock) {
-		this.stock = stock;
+		super(stock);
 		dauCauTang = new ArrayList<String>();
 		giuaCauTang = new ArrayList<String>();
 		dauCauGiam = new ArrayList<String>();
