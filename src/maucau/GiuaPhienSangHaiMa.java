@@ -6,7 +6,11 @@ import java.util.Random;
 
 import stockmarket.BigStock;
 
+<<<<<<< HEAD
 public class GiuaPhienSangHaiMa implements MauCau {
+=======
+public class GiuaPhienSangHaiMa implements iMauCau {
+>>>>>>> 2a6a882432db4013e019f6b914ac2c2b927134ce
 	
 	private static List<String> dauCauTang;
 	private static List<String> giuaCauTang;
@@ -47,7 +51,12 @@ public class GiuaPhienSangHaiMa implements MauCau {
 		StringBuffer sb = new StringBuffer();
 		String dauCau;
 		String giuaCau;
+<<<<<<< HEAD
 		String symbol = stock.getSymbol();
+=======
+		String symbol1 = stock.getSymbol();
+		String symbol2 = stock.getSymbol();
+>>>>>>> 2a6a882432db4013e019f6b914ac2c2b927134ce
 		double giaMoCuaHomNay = stock.getGiaMoCua();
 		double giaGiuaPhien = stock.getGiaGiuaPhienSang();
 		double chenhLech = giaGiuaPhien - giaMoCuaHomNay;
@@ -62,9 +71,15 @@ public class GiuaPhienSangHaiMa implements MauCau {
 			chenhLech = -chenhLech;
 		}
 		
+<<<<<<< HEAD
 		sb.append(dauCau); sb.append(symbol); sb.append(giuaCau); sb.append(String.format("%3g", chenhLech));
 		sb.append(" điểm, dừng ở "); sb.append(giaGiuaPhien); sb.append(" , trong khi ");
 		sb.append(dauCau); sb.append(symbol); sb.append(giuaCau); sb.append(String.format("%3g", chenhLech));
+=======
+		sb.append(dauCau); sb.append(symbol1); sb.append(giuaCau); sb.append(String.format("%3g", chenhLech));
+		sb.append(" điểm, dừng ở "); sb.append(giaGiuaPhien); sb.append(" , trong khi ");
+		sb.append(dauCau); sb.append(symbol2); sb.append(giuaCau); sb.append(String.format("%3g", chenhLech));
+>>>>>>> 2a6a882432db4013e019f6b914ac2c2b927134ce
 		sb.append(" điểm, dừng ở "); sb.append(giaGiuaPhien); sb.append(".");
 		giuaPhienSangHaiMa = sb.toString();
 		

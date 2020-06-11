@@ -8,7 +8,11 @@ import stockmarket.BigStock;
 import stockmarket.Stock;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 public class MauCauMucThapNhat extends MauCauDuaTrenBigStock implements MauCau{
+=======
+public class MauCauMucThapNhat extends MauCauDuaTrenBigStock implements iMauCau {
+>>>>>>> 2a6a882432db4013e019f6b914ac2c2b927134ce
 	
 	public MauCauMucThapNhat(BigStock stock) {
 		super(stock);

@@ -131,7 +131,6 @@ public class Stock {
 	public void printStock() {
 		System.out.printf("%s - %s, %s, %s, %s, %s, %s, %s, %s, %s, %s", symbol, new SimpleDateFormat("dd/MM/yyyy").format(date), 
 			giaMoCua, giaGiuaPhienSang, giaChotPhienSang, giaDauPhienChieu, giaGiuaPhienChieu, giaDongCua, giaThapNhat, giaCaoNhat, volume);
-		System.out.println();
 	}
 	
 }

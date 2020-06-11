@@ -6,7 +6,11 @@ import java.util.Random;
 
 import stockmarket.BigStock;
 
+<<<<<<< HEAD
 public class GiuaPhienSang implements MauCau {
+=======
+public class GiuaPhienSang implements iMauCau {
+>>>>>>> 2a6a882432db4013e019f6b914ac2c2b927134ce
 	private static List<String> dauCauTang;
 	private static List<String> giuaCauTang;
 	private static List<String> dauCauGiam;

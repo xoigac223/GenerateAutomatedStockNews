@@ -61,8 +61,16 @@ public class StockHistory {
 		Calendar c = Calendar.getInstance();
 		c.setTime(today);
 		c.add(Calendar.DAY_OF_MONTH, n);
+<<<<<<< HEAD
 		if (stockHistory.containsKey(c.getTime())) return stockHistory.get(c.getTime());
 		else return null;
+	}
+	public int getSizeHistory() {
+		return stockHistory.size();
+=======
+		System.out.println(c.getTime());
+		return stockHistory.get(c.getTime());
+>>>>>>> 2a6a882432db4013e019f6b914ac2c2b927134ce
 	}
 	public int getSizeHistory() {
 		return stockHistory.size();

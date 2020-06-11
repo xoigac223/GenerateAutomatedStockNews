@@ -4,7 +4,11 @@ import java.util.Map;
 
 import stockmarket.StockExchange;
 
+<<<<<<< HEAD
 public class MauCauCoPhieuLon extends MauCauDuaTrenStockExchange implements MauCau {
+=======
+public class MauCauCoPhieuLon extends MauCauDuaTrenStockExchange implements iMauCau {
+>>>>>>> 2a6a882432db4013e019f6b914ac2c2b927134ce
 	
 	public MauCauCoPhieuLon(StockExchange se) {
 		super(se);

@@ -5,7 +5,11 @@ import java.util.List;
 import stockmarket.StockExchange;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 public class MaCoPhieuTangManhNhat extends MauCauDuaTrenStockExchange implements MauCau{
+=======
+public class MaCoPhieuTangManhNhat extends MauCauDuaTrenStockExchange implements iMauCau{
+>>>>>>> 2a6a882432db4013e019f6b914ac2c2b927134ce
 
 	public MaCoPhieuTangManhNhat(StockExchange se) {
 		super(se);
